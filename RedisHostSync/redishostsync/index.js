@@ -1,4 +1,4 @@
-class RedisHostSync {
+exports.RedisHostSync = class RedisHostSync {
   constructor(url, password) {
     const redis = require('redis');
     const this_class = this
@@ -56,4 +56,13 @@ class RedisHostSync {
   }
 }
 
-module.exports = RedisHostSync
+exports.RedisHost = (url, password, callback) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const new_obj = await new RedisHostSync(url, password)
+      callback ( null, new_obj)
+    } catch (e) {
+      callback (e, null)
+    }
+  });
+}
