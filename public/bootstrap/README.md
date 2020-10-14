@@ -6,5 +6,5 @@ To include use
 ```
 From Github
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/rishavbhowmik/quick_files/master/public/bootstrap/bs4.css" rossorigin="anonymous" />
+<link rel="stylesheet" href="https://raw.githubusercontent.com/rishavbhowmik/quick_files/master/public/bootstrap/bs4.css" crossorigin="anonymous" />
 ```
